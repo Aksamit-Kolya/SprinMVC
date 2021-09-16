@@ -14,9 +14,9 @@ public class PersonDAO {
     {
         people = new ArrayList<>();
 
-        people.add(new Person(++PEOPLE_COUNT, "Kolya"));
-        people.add(new Person(++PEOPLE_COUNT, "Dima"));
-        people.add(new Person(++PEOPLE_COUNT, "Vadim"));
+        people.add(new Person(++PEOPLE_COUNT, "Kolya", 19, "kolya.aksamit@amil.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Dima", 18, "dima.shisha@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Vadim", 18, "vadim.artish@mail.ru"));
     }
 
     public List<Person> index() {
@@ -36,6 +36,8 @@ public class PersonDAO {
         Person personToBeUpdated = show(id);
 
         personToBeUpdated.setName(updatedPerson.getName());
+        personToBeUpdated.setAge(updatedPerson.getAge());
+        personToBeUpdated.setEmail(updatedPerson.getEmail());
     }
 
     public void delete(int id) {
